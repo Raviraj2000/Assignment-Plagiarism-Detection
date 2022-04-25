@@ -1,0 +1,5 @@
+streamlit
+nltk
+sentence_transformers
+pdfplumber
+unidecode
