@@ -1,4 +1,5 @@
 import nltk
+nltk.download('stopwords')
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 
