@@ -32,13 +32,14 @@ def get_similar(extract_dict):
                 else:
                     sim = util.cos_sim(n[1], texts[k][1])
                     if sim.item() > 0.75:
-                        answers.append((texts[k][0]))
+                        answer = texts[k][0] + " " + "({sim}%)".format(sim = round(sim.item() * 100))
+                        answers.append(answer)
                         check.append(texts[k][0])
                         print("printing check", check)
                     ans[texts[i][0]] = answers
         else:
             break
-    
+
     ans = {k: v for k, v in ans.items() if v}
     print("THIS IS ANS", ans)
     return ans
